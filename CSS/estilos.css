@@ -182,10 +182,6 @@ a:hover {
   transition: transform 500ms;
 }
 
-/*.img-portfolio:hover {
-  transform: scale(1.2);
-}*/
-
 .flip-card {
   perspective: 1000px;
 }
@@ -209,11 +205,16 @@ a:hover {
 }
 
 .card-back {
-  background-color: whitesmoke;
+  align-items: center;
+  color: black;
+  background-color: rgb(168, 166, 166);
+  display: flex; 
+  font-family: 'Audiowide', cursive;
   height: 180px;
-  width: 100%;
-  transform: rotateY(180deg);
-  color: red
+  justify-content: center;  
+  text-align: center;
+  transform: rotateY(180deg); 
+  width: 100%; 
 }
 
 .contato .icons {
