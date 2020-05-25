@@ -1,12 +1,53 @@
+/* soft reset do css */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
 body {
   background-image: url("https://image.freepik.com/vetores-gratis/tecnologia-abstrata-ui-futurista-conceito-hud-interface_36402-62.jpg");
   background-size: auto 100vh;
-  font-family: arial;
+  font-family: 'Source Code Pro', monospace;
   height: 100vh;
+  font-size: 12px;
+  color: whitesmoke;
 }
 
-.menu{
+/* se a tela tiver menos de 400px vai carregar estes estilos */
+@media (win-width:400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (win-width:600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
   background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
 }
 
 .menu ul {
@@ -18,8 +59,20 @@ body {
   list-style: none;
 }
 
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  transition: background-color .5s, .5s;
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
 a {
-  color: teal;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -33,6 +86,148 @@ a:hover {
   text-align: center;
 }
 
+.site-title {
+  font-size: 4em;
+  font-family: 'Audiowide', cursive;
+}
+
 .site-subtitle {
+  font-family: 'Audiowide', cursive;
   font-style: italic;
+  line-height: 1,8em;
+}
+
+.sobre,
+.contato,
+.portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2,
+.contato h2,
+.portfolio h2 {
+  font-family: 'Source Code Pro', monospace;
+  color: whitesmoke;
+  margin-bottom: 1em;
+  font-size: 3em;   
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 2em;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+.sobre img {
+  height: 450px;
+  width: 400px;
+  object-fit: cover;
+  object-position: left bottom;
+}
+
+.sobre p {
+  color: whitesmoke;
+  margin-bottom: 1.4em;
+  text-indent: 1.4em;
+  text-align: justify;
+  font-size: 1dem;
+}
+
+.sobre a {
+  color: whitesmoke;
+}
+
+.sobre a:hover {
+  color: rgb(242, 255, 0);
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  transition: transform 500ms;
+}
+
+/*.img-portfolio:hover {
+  transform: scale(1.2);
+}*/
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0em;
+}
+
+.card-back {
+  background-color: whitesmoke;
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
+  color: red
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 6em;
+  transition: text-shadow .5s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px whitesmoke;
 }
