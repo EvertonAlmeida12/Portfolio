@@ -1,21 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everton Almeida</title>
     <link rel="stylesheet" href="CSS\estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Merienda:wght@700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c2b8e886c9.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <nav class="menu">
-          <ul>
-             <li><a href="#">Sobre</a></li>
-             <li><a href="#">Portfólio</a></li>
-             <li><a href="#">Contato</a></li>
-          </ul>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portfolio">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </nav>
-        <h1 class="site-title">Everton Almeida</h1>
-        <h2 class="site-subtitle">jr. frontend developer</h2>
+        <div>
+            <h1 class="site-title">Everton Almeida</h1>
+            <h2 class="site-subtitle">jr. frontend developer</h2>
+        </div>        
     </header>
+    <section class="sobre container" id="sobre">
+        <h2>Sobre</h2>
+
+        <figure class="avatar">
+            <img src="./img/Everton.jpg" alt="Everton Almeida">
+        </figure>   
+        <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit nostrum sunt quam consequuntur! Voluptatum voluptatem tenetur veritatis dolores minus eius quae molestias quia temporibus, sunt atque dolorem vel neque porro!
+        </p>
+
+        <p>
+        Architecto, quis placeat. Sequi dignissimos, quis, incidunt dolore neque harum unde natus architecto eius nostrum consequatur facilis iste porro doloremque quod. Totam quia asperiores placeat, ad nemo praesentium rem enim!
+        </p>
+
+        <p>
+        Quasi, nam nisi eaque hic architecto distinctio? Iure nesciunt nostrum hic quia officiis repellendus ut vel quibusdam quae, ipsa cum possimus odit exercitationem vero magni alias quis! Voluptatem, eum dignissimos?
+        </p>
+
+        <p>
+        Este site foi construido durante a <a href="https://www.alura.com.br/imersao-css">imersão CSS da Alura.</a>
+        </p>
+
+    </section>
+    <section class="portfolio container" id="portfolio">
+        <h2>Projetos</h2>
+
+        <div class="grid">
+        <!-- para mudar imagens aula 3, 17min -->
+            <div class="flip-card">
+                <div class="card">       
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+                        <figcaption>eCommerce</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        parte de trás
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="card">       
+                    <figure>
+                        <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
+                        <figcaption>Mobile</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        parte de trás
+                    </div>
+                </div>
+            </div>    
+            <div class="flip-card">
+                <div class="card">       
+                    <figure>
+                        <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
+                        <figcaption>Mobile</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        parte de trás
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="card">       
+                    <figure>
+                        <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
+                        <figcaption>Mobile</figcaption>
+                    </figure>
+                    <div class="card-back">
+                        parte de trás
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </section>
+    <section class="contato container" id="contato">
+        <h2>Contato</h2>
+
+        <div class="grid icons">
+            <a target="_blank" href="https://www.linkedin.com/in/everton-almeida12">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/everton.almeidas/?hl=pt-br">
+                <i class="fab fa-instagram"></i>
+            </a> 
+            <a target="_blank" href="https://github.com/EvertonAlmeida12">
+                <i class="fab fa-github"></i>
+            </a>                     
+            <a href="mailto:tonrs00@gmail.com">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+
+    </section>
 </body>
 </html>
