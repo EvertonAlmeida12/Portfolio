@@ -24,6 +24,8 @@ body {
 /* breakpoint */
 @media (win-width:600px) {
   body {
+    background-attachment: fixed;
+    background-size: cover;
     font-size: 18px;
   }
 }
@@ -121,33 +123,33 @@ a:hover {
   font-size: 3em;   
 }
 
-.sobre .avatar {
-  float: right;
-  margin-left: 2em;
-  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-}
-
-.sobre img {
-  height: 450px;
-  width: 400px;
-  object-fit: cover;
-  object-position: left bottom;
-}
-
 .sobre p {
   color: whitesmoke;
   margin-bottom: 1.4em;
   text-indent: 1.4em;
-  text-align: justify;
-  font-size: 1dem;
+  text-align: justify;  
 }
 
 .sobre a {
   color: whitesmoke;
+  text-decoration: underline;
 }
 
 .sobre a:hover {
   color: rgb(242, 255, 0);
+}
+
+.sobre .avatar {
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  float: right;
+  margin-left: 2em;  
+}
+
+@media (min-width: 600px) {
+  .sobre .avatar {
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    float: right;
+  }
 }
 
 .portfolio .grid {
@@ -170,20 +172,13 @@ a:hover {
   }
 }
 
-.portfolio figure {
-  text-align: center;
-}
-
-.img-portfolio {
-  height: 180px;
-  width: 100%;
-  object-fit: cover;
-  object-position: left bottom;
-  transition: transform 500ms;
-}
-
 .flip-card {
+  height: 180px;
   perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
 }
 
 .card {
@@ -192,16 +187,13 @@ a:hover {
   transition: transform 3s;
 }
 
-.flip-card:hover .card {
-  transform: rotateY(180deg);
-}
-
 .card-front,
 .card-back {
   backface-visibility: hidden;
   left: 0;
   position: absolute;
   top: 0em;
+  width: 100%;
 }
 
 .card-back {
@@ -212,9 +204,20 @@ a:hover {
   font-family: 'Audiowide', cursive;
   height: 180px;
   justify-content: center;  
-  text-align: center;
   transform: rotateY(180deg); 
   width: 100%; 
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  transition: transform 500ms;
 }
 
 .contato .icons {
@@ -232,3 +235,12 @@ a:hover {
   text-decoration: none;
   text-shadow: 0px 0px 10px whitesmoke;
 }
+
+.sobre img {
+  height: 450px;
+  width: 400px;
+  object-fit: cover;
+  object-position: left bottom;
+}
+
+
